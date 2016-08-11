@@ -1,0 +1,8 @@
+<OGRVRTDataSource>
+    <OGRVRTLayer name="$NAME$">
+        <SrcDataSource>$PATH$/$FILENAME$</SrcDataSource>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>EPSG:31258</LayerSRS>
+        <GeometryField separator=";" encoding="PointFromColumns" x="field_2" y="field_1" z="field_3"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>
