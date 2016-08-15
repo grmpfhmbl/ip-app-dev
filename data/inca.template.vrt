@@ -1,8 +1,17 @@
+<!-- this is an example template for a VRT file -->
 <OGRVRTDataSource>
-    <OGRVRTLayer name="$NAME$">
-        <SrcDataSource>$PATH$/$FILENAME$</SrcDataSource>
+    <OGRVRTLayer name="$NAME$"> <!-- $NAME$ will be replaced by the CSV filename without its path and .csv extension -->
+        <SrcDataSource>$PATH$/$FILENAME$</SrcDataSource> <!-- $PATH$ will be replaced by the full directory path of the
+                                                                     input file
+                                                              $FILENAME$ will be replaced by the filename of the input file -->
         <GeometryType>wkbPoint</GeometryType>
-        <LayerSRS>EPSG:31258</LayerSRS>
+        <LayerSRS>EPSG:31258</LayerSRS>                  <!-- specify the CRS of the input data here -->
         <GeometryField separator=";" encoding="PointFromColumns" x="field_2" y="field_1" z="field_3"/>
+                                                         <!-- here the file itself is described, change the separator
+                                                              field to the separator your input data is using.
+                                                              If your data file has headers to identify columns specify
+                                                              here, what column contains what value. If the file does
+                                                              not have headers, simply use "field_1" etc to specify the
+                                                              columns -->
     </OGRVRTLayer>
 </OGRVRTDataSource>
